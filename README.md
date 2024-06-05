@@ -1,3 +1,7 @@
+## Videos
+
+-   [Getting started with SmartyStreets in Java](https://corporate-trainings.s3.amazonaws.com/smartystreets-api/getting-started-smartystreets-java.mp4)
+
 ## Using SmartyStreets API
 
 -   Go to the organization page on GitHub
