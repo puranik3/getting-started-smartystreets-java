@@ -11,15 +11,5 @@ import java.io.IOException;
 public class DemoApplication {
     public static void main(String[] args) {
         SpringApplication.run(DemoApplication.class, args);
-
-        try {
-            Suggestion[] suggestions = SmartStreetsService.lookupSimple("4770 Lincoln");
-            SmartStreetsService.printResult(suggestions);
-        } catch(SmartyException | IOException | InterruptedException e) {
-            System.out.println(e.getMessage());
-            e.printStackTrace();
-        } catch(Exception e) {
-            System.out.println( e.getMessage() );
-        }
     }
 }

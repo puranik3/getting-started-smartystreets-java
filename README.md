@@ -53,10 +53,16 @@ git clone https://github.com/smartystreets/smartystreets-java-sdk
     <version>3.17.0</version>
 </dependency>
 ```
-
+- Add Spring Web dependency needed to define a REST API
+```
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-web</artifactId>
+</dependency>
+```
 -   Make sure that Maven loads the changes, i.e. downloads the SmartStreets Jar file. For example, in IntelliJ, you get a button on the right to "Load Maven Changes" and clicking it does the job.
 
--   Create the 2 files in `com.digdeeper.GettingStartedSmartyStreetsJava.demo` package with contents as in this repository's demo folder.
+-   Create the 3 files in `com.digdeeper.GettingStartedSmartyStreetsJava.demo` package with contents as in this repository's demo folder.
 -   Fill in your `SMARTY_AUTH_ID` and `SMARTY_AUTH_TOKEN` in `SmartStreetsService.java`
 
 ```java
@@ -64,4 +70,7 @@ private static String SMARTY_AUTH_ID = "<your_auth_id>";
 private static String SMARTY_AUTH_TOKEN = "<your_auth_token>";
 ```
 
--   Run it! You can see the address suggestions logged in the terminal.
+-   Run it! You can see the address suggestions logged in the terminal. You can make the following sample requests.
+- `http://localhost:8080/suggestions?filterKey=4770+Lincoln`
+- `http://localhost:8080/suggestions?filterKey=4770+Lincoln&cities=Oakland,Buena+Park&states=CA`
+- The first one use a simple lookup. The second passes cities and states that are comma-separated as extra request query string parameters.

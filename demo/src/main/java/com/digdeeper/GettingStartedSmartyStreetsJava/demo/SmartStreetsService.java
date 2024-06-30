@@ -15,7 +15,7 @@ import java.util.ArrayList;
 @Service
 public class SmartStreetsService {
     private static String SMARTY_AUTH_ID = "<your_auth_id>";
-    private static String SMARTY_AUTH_TOKEN = "<your_auth_token>";
+    private static String SMARTY_AUTH_TOKEN = "<your_api_key>";
 
     public static Client init() {
         StaticCredentials credentials = new StaticCredentials(SmartStreetsService.SMARTY_AUTH_ID, SmartStreetsService.SMARTY_AUTH_TOKEN);
